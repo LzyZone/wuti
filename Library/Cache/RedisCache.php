@@ -1,6 +1,6 @@
 <?php
 
-namespace Library\Cache;
+namespace WuTi\Library\Cache;
 
 /**
  * @var \Redis
@@ -8,7 +8,7 @@ namespace Library\Cache;
  * @author      : gary.Lee<321539047@qq.com>
  * @create time : 2019-09-10 16:02
  * @details     :
- * @package Library\Cache
+ * @package WuTi\Library\Cache
  * @return \Redis
  */
 class RedisCache

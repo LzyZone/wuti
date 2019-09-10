@@ -1,8 +1,8 @@
 <?php
 
-namespace Library\Factory;
+namespace WuTi\Library\Factory;
 
-use Library\Cache\RedisCache;
+use WuTi\Library\Cache\RedisCache;
 
 class CacheFactory{
     /**

@@ -1,7 +1,7 @@
 <?php
-namespace Library\Shard;
+namespace WuTi\Library\Shard;
 
-use Library\Factory\CacheFactory;
+use WuTi\Library\Factory\CacheFactory;
 
 class RedisShard{
 

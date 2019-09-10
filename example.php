@@ -1,6 +1,8 @@
 <?php
-
 require_once __DIR__.'/vendor/autoload.php';
+/**
+ * this is a example
+ */
 $host = '127.0.0.1';
 $port = 6379;
 $pwd = '';

@@ -1,4 +1,6 @@
 {
+  "name"  : "wuti/wuti",
+  "license" : "MIT",
   "autoload": {
     "psr-4": {
       "WuTi\\Library\\":"Library/",

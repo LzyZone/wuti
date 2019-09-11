@@ -25,18 +25,19 @@ class RedisCache
 
     /**
      * RedisCache constructor.
-     * @param $ip
+     * @param $host
      * @param $port
      * @param $pwd
      * @param int $timeout
      * @param int $db
+     * @param array $ext
      * @param bool $serializer
      */
-    public function __construct($ip, $port, $pwd, $timeout = 3,$db=0,$ext=[])
+    public function __construct($host, $port, $pwd, $timeout = 3,$db=0,$ext=[])
     {
-        $this->config['ip']     = $ip;
+        $this->config['host']     = $host;
         $this->config['port']   = intval($port);
-        $this->config['timeout'] = $timeout;
+        $this->config['timeout'] = intval($timeout);
         $this->config['pwd'] = $pwd;
         $this->config['db'] = intval($db);
         !empty($ext) && $this->config = array_merge($this->config,$ext);
@@ -59,7 +60,7 @@ class RedisCache
                 $config = $this->config;
                 $this->redis = new \Redis();
 
-                $conn = $this->redis->connect($config['ip'],$config['port'],$config['timeout']);
+                $conn = $this->redis->connect($config['host'],$config['port'],$config['timeout']);
                 if(!$conn){
                     throw new \RedisException("redis connection fail,config:".json_encode($config));
                 }
